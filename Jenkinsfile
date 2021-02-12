@@ -6,6 +6,10 @@ node {
 
         checkout scm
     }
+   stage('Dockerfile') {
+       echo "Dockerfile"
+   }
+    
    stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
