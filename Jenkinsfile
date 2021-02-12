@@ -19,9 +19,9 @@ node {
         /* Ideally, we would run a test framework against our image.
          * Just an example */
         
-        app.inside {
+        /*app.inside {
             sh 'echo "Tests passed"'
-        }
+        }*/
         echo "Test image"
     }
 
@@ -35,5 +35,6 @@ node {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }*/
+        echo "Push image"
     }
 }
