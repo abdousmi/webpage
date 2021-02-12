@@ -11,16 +11,18 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("abdousmi/webpage")
+        /* app = docker.build("abdousmi/webpage") */
+        echo "Build image"
     }
 
     stage('Test image') {
         /* Ideally, we would run a test framework against our image.
          * Just an example */
-
+        /*
         app.inside {
             sh 'echo "Tests passed"'
-        }
+        }*/
+        echo "Test image"
     }
 
     stage('Push image') {
